@@ -45,7 +45,7 @@ export const Header = () => {
     <>
       {/* Header dengan background solid */}
       <header
-        className={`fixed top-0 left-0 w-full z-[999] transition-all ${
+        className={`fixed top-0 left-0 w-full z-[100] transition-all ${
           isScrolled ? "shadow-md" : ""
         }`}
       >
@@ -123,7 +123,7 @@ export const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 text-center bg-white z-[998] mt-16 pt-8 overflow-y-auto lg:hidden">
+       <div className="fixed inset-0 text-center bg-white z-[99] mt-16 pt-8 overflow-y-auto lg:hidden">
           <ul className="space-y-6 px-4">
             {[
               { href: "#home", label: "Home" },
