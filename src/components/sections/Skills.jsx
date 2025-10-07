@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import LogoLoop from "../LogoLoop";
 import {
   SiReact,
@@ -10,7 +10,8 @@ import {
   SiMongodb,
   SiGit,
 } from "react-icons/si";
-import { Code2 } from 'lucide-react';
+import { Code2 } from "lucide-react";
+import { ShineBorder } from "../ui/shine-border";
 
 export const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +26,7 @@ export const Skills = () => {
       { threshold: 0.1 }
     );
 
-    const section = document.getElementById('skills');
+    const section = document.getElementById("skills");
     if (section) observer.observe(section);
 
     return () => {
@@ -34,7 +35,7 @@ export const Skills = () => {
   }, []);
 
   const techLogos = [
-    { 
+    {
       node: (
         <div className="flex flex-col items-center gap-3">
           <SiReact className="text-[#61DAFB] text-5xl" />
@@ -42,12 +43,12 @@ export const Skills = () => {
             React
           </span>
         </div>
-      ), 
-      title: "React", 
+      ),
+      title: "React",
       href: "https://react.dev",
-      ariaLabel: "React" 
+      ariaLabel: "React",
     },
-    { 
+    {
       node: (
         <div className="flex flex-col items-center gap-3">
           <SiNextdotjs className="text-white text-5xl" />
@@ -55,10 +56,10 @@ export const Skills = () => {
             Next.js
           </span>
         </div>
-      ), 
-      title: "Next.js", 
+      ),
+      title: "Next.js",
       href: "https://nextjs.org",
-      ariaLabel: "Next.js" 
+      ariaLabel: "Next.js",
     },
     {
       node: (
@@ -71,7 +72,7 @@ export const Skills = () => {
       ),
       title: "TypeScript",
       href: "https://www.typescriptlang.org",
-      ariaLabel: "TypeScript"
+      ariaLabel: "TypeScript",
     },
     {
       node: (
@@ -84,7 +85,7 @@ export const Skills = () => {
       ),
       title: "Tailwind CSS",
       href: "https://tailwindcss.com",
-      ariaLabel: "Tailwind CSS"
+      ariaLabel: "Tailwind CSS",
     },
     {
       node: (
@@ -97,7 +98,7 @@ export const Skills = () => {
       ),
       title: "JavaScript",
       href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      ariaLabel: "JavaScript"
+      ariaLabel: "JavaScript",
     },
     {
       node: (
@@ -110,7 +111,7 @@ export const Skills = () => {
       ),
       title: "Node.js",
       href: "https://nodejs.org",
-      ariaLabel: "Node.js"
+      ariaLabel: "Node.js",
     },
     {
       node: (
@@ -123,7 +124,7 @@ export const Skills = () => {
       ),
       title: "MongoDB",
       href: "https://www.mongodb.com",
-      ariaLabel: "MongoDB"
+      ariaLabel: "MongoDB",
     },
     {
       node: (
@@ -136,7 +137,7 @@ export const Skills = () => {
       ),
       title: "Git",
       href: "https://git-scm.com",
-      ariaLabel: "Git"
+      ariaLabel: "Git",
     },
   ];
 
@@ -150,13 +151,22 @@ export const Skills = () => {
 
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
             <Code2 className="w-4 h-4 text-blue-400" />
-            <span className="text-blue-300 text-sm font-medium">My Tech Stack</span>
+            <span className="text-blue-300 text-sm font-medium">
+              My Tech Stack
+            </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-100 mb-4">
-            Skills & <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Technologies</span>
+            Skills &{" "}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Technologies
+            </span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
@@ -164,15 +174,19 @@ export const Skills = () => {
         </div>
 
         {/* Logo Loop Container */}
-        <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        <div
+          className={`transition-all duration-1000 delay-200 ${
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
           {/* Gradient wrapper untuk background yang smooth */}
           <div className="relative rounded-2xl overflow-hidden">
             {/* Background dengan gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 opacity-50"></div>
-            
+
             {/* Border gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-sm"></div>
-            
+
             {/* Content container */}
             <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 lg:p-12">
               <LogoLoop
@@ -193,31 +207,98 @@ export const Skills = () => {
         </div>
 
         {/* Additional Info */}
-        <div className={`mt-12 text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`mt-12 text-center transition-all duration-1000 delay-400 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <p className="text-slate-400 text-sm">
             Click on icons to learn more about each technology
           </p>
         </div>
 
         {/* Skill Categories */}
-        <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="p-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl hover:border-blue-500/50 transition-all duration-300">
-            <h3 className="text-xl font-bold text-slate-100 mb-3">Frontend</h3>
-            <p className="text-slate-400 text-sm">
-              React, Next.js, TypeScript, Tailwind CSS
-            </p>
+        <div
+          className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-600 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          {/* Frontend Card dengan ShineBorder */}
+          <div className="relative w-full rounded-xl overflow-hidden bg-slate-900/90 backdrop-blur-sm">
+            <ShineBorder
+              borderWidth={2}
+              duration={14}
+              shineColor={["#3b82f6", "#06b6d4", "#3b82f6"]}
+              className="rounded-xl"
+            />
+            <div className="relative p-6 z-10">
+              {/* Icon Background */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl"></div>
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3">
+                  Frontend
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  React, Next.js, TypeScript, Tailwind CSS
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl hover:border-purple-500/50 transition-all duration-300">
-            <h3 className="text-xl font-bold text-slate-100 mb-3">Backend</h3>
-            <p className="text-slate-400 text-sm">
-              Node.js, Express, MongoDB, REST APIs
-            </p>
+
+          {/* Backend Card dengan ShineBorder */}
+          <div className="relative w-full rounded-xl overflow-hidden bg-slate-900/90 backdrop-blur-sm">
+            <ShineBorder
+              borderWidth={2}
+              duration={14}
+              shineColor={["#a855f7", "#ec4899", "#a855f7"]}
+              className="rounded-xl"
+            />
+            <div className="relative p-6 z-10">
+              {/* Icon Background */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-2xl"></div>
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+                  Backend
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Node.js, Express, MongoDB, REST APIs
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl hover:border-pink-500/50 transition-all duration-300">
-            <h3 className="text-xl font-bold text-slate-100 mb-3">Tools</h3>
-            <p className="text-slate-400 text-sm">
-              Git, GitHub, VS Code, Figma, Postman
-            </p>
+
+          {/* Tools Card dengan ShineBorder */}
+          <div className="relative w-full rounded-xl overflow-hidden bg-slate-900/90 backdrop-blur-sm">
+            <ShineBorder
+              borderWidth={2}
+              duration={14}
+              shineColor={["#22c55e", "#10b981", "#22c55e"]}
+              className="rounded-xl"
+            />
+            <div className="relative p-6 z-10">
+              {/* Icon Background */}
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"></div>
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <Code2 className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-3">
+                  Tools
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Git, GitHub, VS Code, Figma, Postman
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
