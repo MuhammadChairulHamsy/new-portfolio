@@ -8,7 +8,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20">
+    <section id='home' className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Content */}
       <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Greeting */}
@@ -29,7 +29,7 @@ export const Hero = () => {
         {/* Role with typing effect styling */}
         <div className="mb-8">
           <p className="text-2xl md:text-3xl text-slate-300 font-medium">
-            Frontend Developer
+            Software Engineer
           </p>
           <div className="mt-2 h-1 w-24 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
         </div>
@@ -42,17 +42,17 @@ export const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300">
-            View My Work
+            CONTACT ME
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </button>
           <button className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 text-slate-100 rounded-lg font-semibold hover:bg-slate-800 hover:border-purple-500 transform hover:scale-105 transition-all duration-300">
-            Get In Touch
+            GET RESUME
           </button>
-        </div>
+      </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-28 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-32 lg:bottom-28 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-slate-400 rounded-full"></div>
         </div>

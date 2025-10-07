@@ -45,7 +45,7 @@ export const Header = () => {
     <>
       {/* Header dengan background solid */}
       <header
-        className={`fixed top-0 left-0 w-full z-[100] transition-all ${
+        className={`fixed top-0 left-0 w-full z-[100]  transition-all ${
           isScrolled ? "shadow-md" : ""
         }`}
       >
@@ -118,7 +118,7 @@ export const Header = () => {
             ))}
           </nav>
         </div>
-        <div className="h-[2px] w-[680px] bg-slate-50 mt-2 mx-auto"></div>
+        <div className="h-[2px] w-[220px] lg:w-[560px] bg-slate-50 mt-2  mx-auto"></div>
       </header>
 
       {/* Mobile Menu Overlay */}
