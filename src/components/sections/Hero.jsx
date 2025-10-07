@@ -8,21 +8,21 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id='home' className="relative min-h-screen flex items-center justify-center pt-20">
+    <section id='home' className="relative min-h-screen flex items-center justify-center pt-28 lg:pt-20">
       {/* Content */}
       <div className={`relative z-10 max-w-5xl mx-auto px-6 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Greeting */}
-        <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-4">
+        <div className="mb-2 lg:mb-3">
+          <span className="inline-block px-4 py-2  bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-4">
             Welcome to my portfolio
           </span>
         </div>
 
         {/* Main heading with gradient */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-5xl md:text-5xl font-bold mb-6 leading-tight">
           <span className="block text-slate-100 mb-2">Hi, I'm</span>
           <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-            Muhammad Chairul Hamsy
+            MUHAMMAD CHAIRUL HAMSY
           </span>
         </h1>
 
@@ -52,7 +52,7 @@ export const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-32 lg:bottom-28 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-36 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-slate-400 rounded-full"></div>
         </div>

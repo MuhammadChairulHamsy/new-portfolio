@@ -102,6 +102,7 @@ export const Header = () => {
             {[
               { href: "#home", label: "Home" },
               { href: "#about", label: "About" },
+              { href: "#skills", label: "Skills" },
               { href: "#menu", label: "Project" },
               { href: "#testimoni", label: "Blog" },
               { href: "#contacts", label: "Contact" },
@@ -128,6 +129,7 @@ export const Header = () => {
             {[
               { href: "#home", label: "Home" },
               { href: "#about", label: "About" },
+              { href: "#skills", label: "Skills" },
               { href: "#menu", label: "Project" },
               { href: "#testimoni", label: "Blog" },
               { href: "#contacts", label: "Contact" },
