@@ -26,7 +26,10 @@ export const About = () => {
   }, []);
 
   return (
-    <section id="about" className="relative py-20 lg:py-32 overflow-hidden">
+    <section
+      id="about"
+      className="relativeflex items-center justify-center px-4 py-20 sm:px-6 lg:px-8 pt-40 sm:pt-32 lg:pt-40"
+    >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -39,8 +42,8 @@ export const About = () => {
           className={`text-center mb-16 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-4">
+          >
+          <div className="inline-flex items-center gap-2 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">
               Get to know me
@@ -56,7 +59,7 @@ export const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-32 xl:gap-40 items-center">
           {/* Text Content */}
           <div
             className={`order-2 lg:order-1 transition-all duration-1000 delay-200 ${
@@ -135,7 +138,7 @@ export const About = () => {
               </div>
 
               {/* Profile Card with enhanced styling */}
-              <div className="relative">
+              <div className="relative cursor-pointer">
                 <ProfileCard
                   name="Muhammad Chairul Hamsy"
                   title="Software Engineer"
@@ -152,42 +155,6 @@ export const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Technologies Section */}
-        {/* <div
-          className={`mt-20 transition-all duration-1000 delay-600 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h3 className="text-2xl font-bold text-center text-slate-100 mb-8">
-            Technologies I{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Love
-            </span>
-          </h3>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "JavaScript",
-              "React",
-              "Node.js",
-              "TypeScript",
-              "Next.js",
-              "Tailwind CSS",
-              "MongoDB",
-              "Express",
-              "Git",
-              "Docker",
-            ].map((tech, index) => (
-              <span
-                key={index}
-                className="px-5 py-2.5 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-lg text-slate-300 text-sm font-medium hover:border-purple-500/50 hover:text-purple-300 hover:scale-105 transition-all duration-300 cursor-default"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   );

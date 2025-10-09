@@ -69,7 +69,7 @@ export const Header = () => {
 
           {/* Hamburger Button - Berubah jadi X saat menu terbuka */}
           <button
-            className="lg:hidden p-2 focus:outline-none"
+            className="lg:hidden p-2 focus:outline-none cursor-pointer"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -124,7 +124,11 @@ export const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-       <div className="fixed inset-0 text-center bg-white z-[99] mt-16 pt-8 overflow-y-auto lg:hidden">
+        <div
+          className={`fixed inset-0 text-center bg-slate-950/95  backdrop-blur-md z-[99] mt-28 pt-8 overflow-y-auto lg:hidden transition-all duration-300 ${
+            isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
           <ul className="space-y-6 px-4">
             {[
               { href: "#home", label: "Home" },
@@ -148,7 +152,7 @@ export const Header = () => {
                 <a
                   href={item.href}
                   onClick={closeMenu}
-                  className="relative block py-3 text-xl font-semibold text-gray-800 transition-all duration-200 hover:text-[#059669] hover:bg-gray-50 rounded-lg px-4 group"
+                  className="relative block py-3 text-xl font-semibold text-slate-100 transition-all duration-200 hover:text-[#059669]  rounded-lg px-4 group"
                 >
                   {item.label}
                   {/* Mobile menu underline - sama seperti desktop */}
