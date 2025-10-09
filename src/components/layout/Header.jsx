@@ -103,9 +103,9 @@ export const Header = () => {
               { href: "#home", label: "Home" },
               { href: "#about", label: "About" },
               { href: "#skills", label: "Skills" },
-              { href: "#menu", label: "Project" },
-              { href: "#testimoni", label: "Blog" },
-              { href: "#contacts", label: "Contact" },
+              { href: "#projects", label: "Projects" },
+              { href: "#blog", label: "Blog" },
+              { href: "#contact", label: "Contact" },
             ].map((item) => (
               <a
                 key={item.href}
@@ -119,7 +119,7 @@ export const Header = () => {
             ))}
           </nav>
         </div>
-        <div className="h-[2px] w-[220px] lg:w-[560px] bg-slate-50 mt-2  mx-auto"></div>
+        <div className="h-[2px] w-[220px] lg:w-[635px] bg-slate-50 mt-2  mx-auto"></div>
       </header>
 
       {/* Mobile Menu Overlay */}
@@ -134,9 +134,9 @@ export const Header = () => {
               { href: "#home", label: "Home" },
               { href: "#about", label: "About" },
               { href: "#skills", label: "Skills" },
-              { href: "#menu", label: "Project" },
-              { href: "#testimoni", label: "Blog" },
-              { href: "#contacts", label: "Contact" },
+              { href: "#projects", label: "Projects" },
+              { href: "#blogs", label: "Blogs" },
+              { href: "#contact", label: "Contact" },
             ].map((item, index) => (
               <li
                 key={item.href}

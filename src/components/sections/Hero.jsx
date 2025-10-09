@@ -97,7 +97,7 @@ export const Hero = () => {
               </div>
 
               {/* Code Block */}
-              <div className="w-full overflow-x-auto">
+              <div className="w-full">
                 <div className="text-xs sm:text-sm lg:text-[1rem]">
                   <SyntaxHighlighter
                     language="javascript"
