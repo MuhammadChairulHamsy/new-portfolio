@@ -222,7 +222,7 @@ export const Skills = () => {
           className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-1000 delay-600 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-        >
+          >
           {/* Frontend Card dengan ShineBorder */}
           <div className="relative w-full rounded-xl overflow-hidden bg-slate-900/90 backdrop-blur-sm">
             <ShineBorder
