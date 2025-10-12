@@ -4,21 +4,21 @@ export const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@yourmail.com",
+    value: "mach.hamsy@gmail.com",
     link: "mailto:hello@yourmail.com",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     icon: Phone,
     title: "Phone",
-    value: "+62 812 3456 7890",
+    value: "+62 89649945443",
     link: "tel:+6281234567890",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Palangkaraya, Indonesia",
+    value: "Binjai, Sumatra Utara, Indonesia",
     link: "https://maps.google.com",
     gradient: "from-green-500 to-emerald-500",
   },
@@ -28,7 +28,7 @@ export const socialLinks = [
   {
     icon: Github,
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/MuhammadChairulHamsy/",
     color: "hover:text-slate-100",
   },
   {
