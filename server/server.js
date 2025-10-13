@@ -10,7 +10,7 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173", // Vite default port
     credentials: true,
   })
 );
@@ -44,14 +44,14 @@ app.post("/api/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   // Validasi
-  if (!name || !email || !subject || !message) {
+  if (!name || !email || !message) {
     return res.status(400).json({
       success: false,
       message: "Semua field harus diisi",
     });
   }
 
-  // Validaso email format
+  // Validasi email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({
@@ -63,56 +63,18 @@ app.post("/api/contact", async (req, res) => {
   // Email options
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_PASS,
+    to: process.env.EMAIL_USER,
     subject: `🔔 Portfolio Contact: Pesan dari ${name}`,
     html: `
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-          .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; }
-          .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
-          .info-box { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-          .label { font-weight: bold; color: #667eea; margin-bottom: 5px; }
-          .value { color: #333; margin-bottom: 15px; }
-          .message-box { background: white; padding: 20px; border-left: 4px solid #667eea; margin: 20px 0; }
-          .footer { text-align: center; color: #999; font-size: 12px; margin-top: 20px; }
-        
-      
-      
-        
-          
-            📧 Pesan Baru dari Portfolio
-            Anda menerima pesan kontak baru
-          
-          
-            
-              👤 Nama:
-              ${name}
-              
-              📧 Email:
-              ${email}
-              
-              📅 Waktu:
-              ${new Date().toLocaleString("id-ID", {
-                dateStyle: "full",
-                timeStyle: "short",
-                timeZone: "Asia/Jakarta",
-              })}
-            
-            
-            Pesan:
-            ${subject}
-            
-              💬 Pesan:
-              ${message}
-            
-            
-            
-              Email ini dikirim otomatis dari portfolio website Anda
-            
-          
-        
-      
-      
+      <div style="font-family:Arial,sans-serif;line-height:1.6;">
+        <h2>📩 Pesan Baru dari Portfolio</h2>
+        <p><strong>Nama:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subjek:</strong> ${subject}</p>
+        <p><strong>Pesan:</strong><br>${message}</p>
+        <hr/>
+        <small>Email ini dikirim otomatis dari website portfolio Anda</small>
+      </div>
     `,
     replyTo: email,
   };
@@ -135,15 +97,18 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: "Endpoint not found" });
 });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(` 
-    🚀 Server is running!            
-    📍 http://localhost:${PORT}         
-    ✅ Ready to receive contacts
-`);
+  console.log(`
+╔═══════════════════════════════════════╗
+║   🚀 Server is running!              ║
+║   📍 http://localhost:${PORT}          ║
+║   ✅ Ready to receive contacts       ║
+╚═══════════════════════════════════════╝
+  `);
 });

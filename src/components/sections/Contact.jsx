@@ -69,7 +69,7 @@ export const Contact = () => {
       } else {
         setIsSubmitting('error');
         setIsSuccess(data.message || "Gagal mengirim pesan");
-      }
+    }
     } catch (error) {
       console.error("Error", error);
       setIsSubmitting("error");
