@@ -48,6 +48,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsSuccess(false);
 
     try {
       const response = await fetch("/api/contact", {
@@ -61,19 +62,20 @@ export const Contact = () => {
       const data = await response.json();
 
       if (data.success) {
-        setIsSubmitting("success");
+        setIsSuccess(true); // ✅ INI YANG KURANG!
         setFormData({ name: "", email: "", subject: "", message: "" });
 
-         // Reset success message setelah 5 detik
-        setTimeout(() => setIsSubmitting(''), 5000);
+        setTimeout(() => {
+          setIsSuccess(false);
+        }, 5000);
       } else {
-        setIsSubmitting('error');
-        setIsSuccess(data.message || "Gagal mengirim pesan");
-    }
+        alert(data.message || "Gagal mengirim pesan");
+      }
     } catch (error) {
-      console.error("Error", error);
-      setIsSubmitting("error");
-      setIsSuccess("Terjadi kesalahan jaringan. Silakan coba lagi.");
+      console.error("Error:", error);
+      alert("Terjadi kesalahan jaringan. Silakan coba lagi.");
+    } finally {
+      setIsSubmitting(false); // ✅ INI YANG BENAR!
     }
   };
 
