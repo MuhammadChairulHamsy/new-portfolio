@@ -76,21 +76,21 @@ export const Header = () => {
             <div className="w-6 h-6 flex flex-col justify-center items-center relative">
               {/* Line 1 */}
               <span
-                className={`w-6 h-0.5 bg-[#065F46] absolute transform transition-all duration-300 ease-in-out ${
+                className={`w-6 h-0.5 bg-purple-400 absolute transform transition-all duration-300 ease-in-out ${
                   isMenuOpen ? "rotate-45 translate-y-0" : "-translate-y-2"
                 }`}
               ></span>
 
               {/* Line 2 */}
               <span
-                className={`w-6 h-0.5 bg-[#065F46] absolute transform transition-all duration-300 ease-in-out ${
+                className={`w-6 h-0.5 bg-pink-400 absolute transform transition-all duration-300 ease-in-out ${
                   isMenuOpen ? "opacity-0" : "opacity-100"
                 }`}
               ></span>
 
               {/* Line 3 */}
               <span
-                className={`w-6 h-0.5 bg-[#065F46] absolute transform transition-all duration-300 ease-in-out ${
+                className={`w-6 h-0.5 bg-blue-400 absolute transform transition-all duration-300 ease-in-out ${
                   isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-2"
                 }`}
               ></span>
@@ -110,11 +110,11 @@ export const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="relative text-slate-100 font-medium transition-colors duration-200 hover:text-[#059669] group"
+                className="relative text-slate-100 font-medium transition-colors duration-200 hover:text-purple-400 group"
               >
                 {item.label}
                 {/* Simple underline effect */}
-                <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#059669] transition-all duration-200 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-pink-400 transition-all duration-200 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
@@ -152,11 +152,11 @@ export const Header = () => {
                 <a
                   href={item.href}
                   onClick={closeMenu}
-                  className="relative block py-3 text-xl font-semibold text-slate-100 transition-all duration-200 hover:text-[#059669]  rounded-lg px-4 group"
+                  className="relative block py-3 text-xl font-semibold text-slate-100 transition-all duration-200 hover:text-purple-400 rounded-lg px-4 group"
                 >
                   {item.label}
                   {/* Mobile menu underline - sama seperti desktop */}
-                  <span className="absolute left-4 bottom-2 w-0 h-[2px] bg-[#059669] transition-all duration-200 group-hover:w-[calc(100%-1rem)]"></span>
+                  <span className="absolute left-4 bottom-2 w-0 h-[2px] bg-pink-400 transition-all duration-200 group-hover:w-[calc(100%-1rem)]"></span>
                 </a>
               </li>
             ))}

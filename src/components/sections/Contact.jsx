@@ -45,20 +45,36 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 3000);
-    }, 1500);
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitting("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+
+         // Reset success message setelah 5 detik
+        setTimeout(() => setIsSubmitting(''), 5000);
+      } else {
+        setIsSubmitting('error');
+        setIsSuccess(data.message || "Gagal mengirim pesan");
+      }
+    } catch (error) {
+      console.error("Error", error);
+      setIsSubmitting("error");
+      setIsSuccess("Terjadi kesalahan jaringan. Silakan coba lagi.");
+    }
   };
 
   return (
