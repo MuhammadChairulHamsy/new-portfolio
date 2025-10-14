@@ -64,16 +64,16 @@ app.post("/api/contact", async (req, res) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.EMAIL_USER,
-    subject: `🔔 Portfolio Contact: Pesan dari ${name}`,
+    subject: `🔔 Portofolio Contact: Pesan dari ${name}`,
     html: `
       <div style="font-family:Arial,sans-serif;line-height:1.6;">
-        <h2>📩 Pesan Baru dari Portfolio</h2>
+        <h2>📩 Pesan Baru dari Portofolio</h2>
         <p><strong>Nama:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subjek:</strong> ${subject}</p>
         <p><strong>Pesan:</strong><br>${message}</p>
         <hr/>
-        <small>Email ini dikirim otomatis dari website portfolio Anda</small>
+        <small>Email ini dikirim otomatis dari website Portofolio Anda</small>
       </div>
     `,
     replyTo: email,

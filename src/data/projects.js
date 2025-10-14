@@ -12,12 +12,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Task Management System",
+    title: "List Restaurant",
     description:
-      "Collaborative task management tool with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
-    image: "/projects/Project-1.png",
-    technologies: ["Next.js", "TypeScript", "Firebase", "Shadcn"],
-    liveUrl: "https://example.com",
+      "ListRestaurant adalah aplikasi berbasis web yang memungkinkan pengguna untuk melihat, menambahkan, dan mengelola daftar restoran. Aplikasi ini memanfaatkan API eksternal, fitur kamera, lokasi interaktif berbasis peta (Leaflet.js), dan push notification untuk memberikan pengalaman interaktif yang lebih kaya.",
+    image: "/projects/Project-2.png",
+    technologies: ["Javascript", "leaflet", "vite-plugin-pwa"],
+    liveUrl: "https://listrest.netlify.app/",
     githubUrl: "https://github.com/MuhammadChairulHamsy/",
     category: "Productivity",
   },
