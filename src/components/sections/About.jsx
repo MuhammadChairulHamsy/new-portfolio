@@ -30,12 +30,6 @@ export const About = () => {
       id="about"
       className="relativeflex items-center justify-center px-4 py-20 sm:px-6 lg:px-8 pt-40 sm:pt-32 lg:pt-40"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
         <div
@@ -43,7 +37,7 @@ export const About = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="inline-flex items-center gap-2 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full mb-4">
             <Sparkles className="w-4 h-4 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">
               Get to know me

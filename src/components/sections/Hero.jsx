@@ -66,7 +66,7 @@ export const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
               <button
-                className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                className="group px-3 flex items-center gap-2 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300 cursor-pointer"
                 onClick={() => {
                   document.getElementById("contact")?.scrollIntoView({
                     behavior: "smooth",
@@ -75,12 +75,32 @@ export const Hero = () => {
                 }}
               >
                 CONTACT ME
-                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM20 17H24V19H20V17ZM17 12H24V14H17V12ZM19 7H24V9H19V7Z"></path>
+                </svg>
               </button>
-              <button className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 text-slate-100 rounded-lg font-semibold hover:bg-slate-800 hover:border-purple-500 transform hover:scale-105 transition-all duration-300 cursor-pointer">
+              <button className="flex items-center gap-2 px-3 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 text-slate-100 rounded-lg font-semibold hover:bg-slate-800 hover:border-purple-500 transform hover:scale-105 transition-all duration-300 cursor-pointer">
                 GET RESUME
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path>
+                </svg>
               </button>
             </div>
           </div>

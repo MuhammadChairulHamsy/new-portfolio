@@ -81,12 +81,6 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-      </div>
-
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
         <div

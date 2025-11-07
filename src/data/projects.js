@@ -19,7 +19,7 @@ export const projects = [
     technologies: ["Javascript", "leaflet", "vite-plugin-pwa"],
     liveUrl: "https://listrest.netlify.app/",
     githubUrl: "https://github.com/MuhammadChairulHamsy/",
-    category: "Productivity",
+    category: "Restaurant",
   },
   {
     id: 3,

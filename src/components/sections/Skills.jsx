@@ -143,11 +143,6 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-      </div>
 
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         {/* Section Header */}
@@ -182,13 +177,13 @@ export const Skills = () => {
           {/* Gradient wrapper untuk background yang smooth */}
           <div className="relative rounded-2xl overflow-hidden">
             {/* Background dengan gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 opacity-50"></div>
+            <div className="absolute inset-0 opacity-50"></div>
 
             {/* Border gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-sm"></div>
+            <div className="absolute inset-0 rounded-2xl"></div>
 
             {/* Content container */}
-            <div className="relative bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 lg:p-12">
+            <div className="relative rounded-2xl p-8 lg:p-12">
               <LogoLoop
                 logos={techLogos}
                 speed={120}
